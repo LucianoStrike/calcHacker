@@ -1,0 +1,286 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/*  definindo o estilo da navbar     */
+.navbar{
+    position: fixed;
+    width: 100%;
+    /*background: rgb(0, 0, 0);  */
+    padding: 30px 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.navbar.sticky{
+    background: rgb(0, 0, 0);  
+    padding: 15px 0;
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.navbar .logo a{
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+    font-weight: 500;
+}
+.navbar .logo a span{
+    color: white;
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color: black;
+}
+
+.navbar .menu li{
+    list-style: none; 
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 800px;
+    margin-left: 10px;
+    transition: color 0.3s ease ;
+}
+.navbar .menu li:hover{
+    color: rgb(0, 14, 116);
+}
+.navbar.sticky li a:hover{
+    color: white;
+}
+
+/* aqui vamos embelezar nossa home */
+.home{
+    display: flex;
+    background: url(imagens/10.PNG) no-repeat center;
+    height: 100vh;
+    color: white;
+    min-height: 500px;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.home .home-content a{
+    display: inline-block;
+    background: white;
+    color: black;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+.home .home-content a:hover{
+    color: black;
+    background: none;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 500;
+    margin-left: 3px;
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.home .home-content .text-3 span{
+    color: black;
+    font-weight: 500;
+}
+
+/*menu no telefone*/
+.menu-btn{
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+/*sessão sobre*/
+section{
+    padding: 100px 0;
+}
+.about{
+    font-family: 'Roboto', sans-serif;
+}
+.about .about-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+    color: #0068FF;
+}
+.about .about-content .right p{
+    text-align: justify;
+}
+.about .about-content .right a{
+    display: inline-block;
+    background: #0068FF;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 15px 30px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+}
+.about .about-content a:hover{
+    color: black;
+    background: none;
+    border: 2px solid black;
+}
+.about .title{
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 60px;
+    padding: 20px;
+    position: relative;
+}
+.about .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: black;
+    transform: translateX(-50%);
+}
+.about .title::after{
+    content: "Quem eu  sou";
+    position: absolute;
+    bottom:-12px;
+    left: 50%;
+    font-size: 20px;
+    background: white;
+    color: black;
+    padding: 5px;
+    transform: translateX(-50%);
+}
+.about .about-content .left img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/*responsivo */
+@media(max-width: 1300px){
+    .navbar .max-width{
+        margin-left: 0;
+    }
+}
+@media(max-width: 1104px){
+    .about .about-content .left img{
+        width: 350px;
+        height: 350px;
+    }
+}
+@media(max-width: 991px){
+    .navbar .max-width{
+        padding: 0 50px;
+    }
+}
+@media(max-width: 947px){
+    max-width{
+        max-width: 800px;
+        padding: 0 50px;
+    }
+    .navbar .menu{
+        position: fixed;
+        width: 100%;
+        height: 50vh;
+        left: 0;
+        top: 0;
+        background: black;
+        padding-top: 10px;
+        text-align: center;
+    }
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px;
+        font-size: 25px;
+    }
+    .home  .text-2{
+        font-size: 70px;
+    }
+    .home  .text-3{
+        font-size: 40px;
+    }
+    .home  a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .about .column{
+        width: 50%;
+    }
+    .about  .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about  .right{
+        flex: 100%;
+    }
+} 
+@media(max-width: 690px){
+    .home  .text-2{
+        font-size: 60px;
+    }
+    .home  .text-3{
+        font-size: 32px;
+    }
+    .home  a{
+        font-size: 20px;
+    }
+    
+}
+@media(max-width: 500px){
+    .home  .text-2{
+        font-size: 60px;
+    }
+    .home  .text-3{
+        font-size: 32px;
+    }
+    
+}
