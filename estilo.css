@@ -40,8 +40,11 @@
     color: white;
     transition: all 0.3s ease;
 }
+.navbar.sticky .logo a{
+    color: blue;
+}
 .navbar.sticky .logo a span{
-    color: black;
+    color: white;
 }
 
 .navbar .menu li{
