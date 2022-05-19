@@ -135,6 +135,9 @@ html{
     color: black;
     font-weight: 500;
 }
+.home{
+    background-color: blue;
+}
 
 /*menu no telefone*/
 .menu-btn{
