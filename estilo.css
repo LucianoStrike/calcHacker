@@ -305,6 +305,16 @@ section .title::after{
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
+.services .serv-content p{
+    text-align: justify;
+}
+.services .serv-content p a{
+    color: rgb(4, 157, 4);
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 
 /*SESSAO ESPECIALIDADE*/
 .skills .title::after{
