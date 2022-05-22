@@ -62,7 +62,7 @@ html{
     transition: color 0.3s ease ;
 }
 .navbar .menu a{
-    color: white;
+    color: white ;
 }
 .navbar .menu li:hover{
     color: rgb(255, 255, 255);
@@ -521,7 +521,7 @@ footer span a:hover{
 }
 @media(max-width: 991px){
     .navbar .menu{
-        display: none;
+        display: inline-block;
     }
     .navbar .max-width{
         padding: 0 50px;
@@ -554,6 +554,7 @@ footer span a:hover{
         display: inline-block;
         margin: 10px;
         font-size: 10px;
+        color: white;
     }
     .home  .text-2{
         font-size: 70px;
